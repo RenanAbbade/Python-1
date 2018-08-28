@@ -1,0 +1,29 @@
+'''ExBusca01 - Na busca linear implementada em aula, o algoritmo tentava encontrar a primeira ocorrência do elemento procurado. Queremos agora encontrar a última ocorrência (caso exista) de um determinado elemento. Para isto, desenvolva a função:'''
+# Verifica se o elemento está na lista L utilizando busca linear iterativa
+# Gera uma lista com n elementos aleatórios de 1 a 100
+
+# Verifica se o elemento está na lista L utilizando busca linear iterativa
+import random
+# Gera uma lista com n elementos aleatórios de 1 a 100, com valores 
+# distintos e ordenados
+def generateOrderedList(n):
+  lista = []
+  # obtém n amostras distintas entre 1 e 100
+  lista = random.sample(range(1,101), n)
+
+  # neste exercício estamos utilizando o método sort para a ordenação, 
+  # mas quando estudarmos ordenação não iremos utilizá-lo
+  lista.sort()
+
+  return lista
+def linearSearch(lista, num):
+  n = len(lista)
+  for i in range(n-1,0,-1):
+    if lista[i] == num: 
+		    return i
+  return -1
+
+
+lista = generateOrderedList(100)
+print(lista)
+print(linearSearch(lista, 10))

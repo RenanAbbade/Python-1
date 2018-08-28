@@ -1,0 +1,13 @@
+"""
+Escreva uma função não recursiva que receba como parâmetro uma lista de inteiros e 
+retorne como resposta a soma de todos os elementos da lista.
+"""
+def soma(lista):
+  soma = 0
+  for i in lista:
+    soma = i + soma
+
+  return soma
+    
+lista = [5,5,5,5,5]
+print("A soma dessa lista será",soma(lista))

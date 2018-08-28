@@ -1,0 +1,10 @@
+L = [1,2,3,4,5]
+print(L)
+for i in range(len(L)):
+    aux = L[i]
+    j = i - 1
+    while j>= 0 and L[j] >aux:
+        L[j+1] = L[j]
+        j = j - 1
+    L[j+1] = aux  #coloca D na posição correta
+print(L)

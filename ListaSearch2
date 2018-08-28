@@ -1,0 +1,40 @@
+import random
+# Gera uma lista com n elementos aleatórios de 1 a 100, com valores 
+# distintos e ordenados
+def generateOrderedList(n):
+  lista = []
+  # obtém n amostras distintas entre 1 e 100
+  lista = random.sample(range(1,101), n)
+
+  # neste exercício estamos utilizando o método sort para a ordenação, 
+  # mas quando estudarmos ordenação não iremos utilizá-lo
+  lista.sort()
+
+  return lista
+  
+
+
+# Verifica se o elemento está na lista L utilizando busca binária iterativa
+def binarySearch(lista, num):
+  low = 0
+  high = len(lista)-1
+  while high >= low:
+     mid = (low+high)//2
+     if lista[mid] == num: 
+          return mid
+     elif lista[mid] < num:
+          low = mid + 1
+     else:
+       high = mid-1
+
+  return -1 
+
+lista = generateOrderedList(10)
+print("A lista que foi dado foi ",lista)
+print(binarySearch(lista,10))
+
+if binarySearch(lista,10) == - 1:
+  print("Seu número não está na lista aleatório ")
+elif binarySearch(lista,10) == 10:
+  print(" Seu número está presente na lista ")
+  

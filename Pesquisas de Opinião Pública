@@ -1,0 +1,19 @@
+import random
+tamanho = int(input("Digite o tamanho da amostra desejada:")) #Fizemos com tamanho de amostra personalizavel pelo usuário
+lista = []
+i = 0
+while i < tamanho:
+    i += 1
+    n = random.randint(1,287)
+    if n <= 9:
+        n = "00"+str(n)
+    elif n <= 99 and n > 9:
+        n = "0"+str(n)
+    else:
+        n = str(n)
+    if lista.count(n) == 0:
+        lista.append(n)
+    else:
+        i -= 1
+        
+print(lista)

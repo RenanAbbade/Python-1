@@ -1,0 +1,21 @@
+import random
+# Gera uma lista com n elementos aleatórios de 1 a 100
+def generateList(n):
+  lista = []
+  for i in range(n):
+    lista.append(random.randint(1,100))
+  return lista
+  
+# Verifica se o elemento está na lista L utilizando busca linear iterativa
+def linearSearch(lista, num):
+  n = len(lista)
+  for i in range(n-1):
+    if lista[i] == num: 
+		    return i
+  return -1
+
+
+listas = generateList(10)
+print(listas)
+print(linearSearch(listas, 10))
+

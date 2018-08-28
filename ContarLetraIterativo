@@ -1,0 +1,13 @@
+
+"""
+Escreva uma função não recursiva que receba como parâmetros uma letra e uma palavra, e retorne quantas vezes a letra aparece dentro da palavra
+"""
+def parametros():
+  palavra = input("Digite uma palavra qualquer")
+  letra = input("Agora digite uma letra, de preferencia que apareça na palavra ")
+  print("Ocorrências da letra na palavra é: ", palavra.count(letra))
+  
+print(parametros())
+  
+
+  

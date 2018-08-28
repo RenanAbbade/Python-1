@@ -1,0 +1,12 @@
+def binario(num):
+    binario = '' # Para receber o valor de num
+    while num != 0:
+        
+        binario += str(num % 2) #binario = binario + valor dividido será recebido como String
+        
+        num = int(num / 2)   
+        
+    return binario[::-1]  #inverter a sequencia de termos, ex: 1100 -> 0011  
+   
+num = entrada()
+print('A conversão do decimal:',num,'para binário é: ',binario(num))
